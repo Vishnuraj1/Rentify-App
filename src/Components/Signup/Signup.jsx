@@ -23,44 +23,68 @@ const Signup = () => {
     <div class="nav">
         <h1>RENTIFY</h1>
     </div>
-    <div>
-           <div className="container">
-      <div className="login-container" onSubmit={handlesubmit}>
-        <h1>Sign Up</h1>
-        <form action="" method="post">
-          <label htmlFor="username">Username</label>
+    <div className="signupParentDiv">
+        <img width="200px" height="200px" ></img>
+        <form onSubmit={handlesubmit}>
+          <label htmlFor="fname">Username</label>
+          <br />
           <input
-            type="text" onChange={(e) => setEmail(e.target.value)}
-            id="username"
-            name="username"
-            placeholder="Enter your phone number or email"
-            required
-          /> <br/> <br/>
-          <label htmlFor="password">Password</label>
+            className="input"
+            type="text"
+            // value={Username}
+            onChange={(e) => setUsername(e.target.value)}
+            id="fname"
+            name="name"
+            defaultValue="John"
+          />
+          <br />
+          <label htmlFor="fname">Email</label>
+          <br />
           <input
-            type="password" onChange={(e) => setPassword(e.target.value)}
-            id="password"
+            className="input"
+            type="email"
+            // value={Email}
+            onChange={(e) => setEmail(e.target.value)}
+            id="fname"
+            name="email"
+            defaultValue="John"
+          />
+          <br />
+            
+          <label htmlFor="lname">Phone</label>
+          <br />
+          <input
+            className="input"
+            type="number"
+            // value={Phone}
+            onChange={(e) => setPhone(e.target.value)}
+            id="lname"
+            name="phone"
+            defaultValue="Doe"
+            />
+          <br />
+          <label htmlFor="lname">Password</label>
+          <br />
+          <input
+            className="input"
+            type="password"
+            // value={Password}
+            onChange={(e) => setPassword(e.target.value)}
+            id="lname"
             name="password"
-            placeholder="Password"
-            required
-          /> <br/> <br/>
-          <button className="loginbutton" type="submit">
-            Sign Up
-          </button>
-          <div className="botom">
-            <h5>
-              Already a user? 
-              <Link to="/login"> Sign in</Link>
-            </h5>
-            <h5>
-              Forgot password ? 
-              <a href="reset.html"  >reset</a>
-            </h5>
-          </div>
+            defaultValue="Doe"
+            />
+          <br />
+          <br />
+            {/* {error && <span className="errMessage">{error}</span>} */}
+            <br />
+          <button >Signup</button>
         </form>
+        <Link to="/login">
+          <a>Login</a>
+        </Link>
+
       </div>
-    </div>
-    </div>
     </>
   )
 }
