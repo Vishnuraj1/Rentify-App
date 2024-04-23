@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import Cart from '../../assets/Header/Cart.svg'
 import Search from '../../assets/Header/Search.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -18,9 +19,10 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="rightSection">
-                   <a href="" id='cart'><span > <img src={Cart} id='cartIcon' alt="" /> Cart</span></a> 
-                   <a href=""><span id='login'>Login</span></a> 
-                    <button id='btn'>Sign Up</button>
+                   <a href="" id='cart'><span > <img src={Cart} id='cartIcon' alt="" /> Create Rent</span></a> 
+                   <Link to="/login"><span id='login'>Login</span></Link>
+                   <Link to="/signup"> <button id='btn'>Sign Up</button></Link>
+                   
                 </div>
             </div>
         </div>

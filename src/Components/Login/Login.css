@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+.nav{
+    background-color: rgb(1, 0, 3);
+    margin: 0;
+    height: 80px;
+    display: flex;
+}
+.nav h1{
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.reset-container{
+    width: 30px;
+    height: 40px;
+    background-color: black;
+}
+
+.login-container {
+    background-color:white;
+    border: .1rem solid black;
+    border-radius: .4rem;
+    padding: 20px;
+    width: 20rem;
+    height: 35rem;
+    text-align: center;
+    align-items: center;
+    box-shadow: #000000;
+    box-sizing: content-box;
+}
+.login-container h1{
+    color: #000000
+}
+.login-container label{
+    margin: 5px;
+    margin-right: 350px;
+    font-size: 16px;
+    color: rgb(5, 0, 0);
+}
+.login-container input{
+    width: 300px;
+    height: 30px;
+    font-size: medium;
+    border-radius: 6px;
+}
+.loginbutton{
+    width: 150px;
+    height: 30PX;
+    border-radius: 4px;
+    font-size: medium;
+
+}
+.or{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    
+}
+
+.botom{
+color:rgb(12, 1, 1);
+}
+a{
+    text-decoration: none;
+}
+
+.singup{
+    background-color:white;
+    width: 20rem;
+}
+.ggl-img{
+    width:1rem;
+    height: 1rem;
+    padding-right: 1rem;
+    padding: auto;
+}
+.ggl{
+    width: 300px;
+    height: 30px;
+    border-radius: 8rem;
+}
