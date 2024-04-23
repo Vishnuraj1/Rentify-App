@@ -1,0 +1,24 @@
+.AboutContainer{
+
+}
+.cardContainer{
+    margin: 5rem 5rem;
+    width: 1353px;
+    height: 447px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius:50px ;
+}
+
+
+.blackContainer{
+    background-color: black;
+    color: white;
+}
+
+.cardText{
+    font-size: 64px;
+}
+
