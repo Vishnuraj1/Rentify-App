@@ -1,0 +1,30 @@
+
+.CategoryContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem 5rem;
+}
+
+.category {
+    width: 183px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     padding: 3rem 1rem; 
+    border-radius: 10%;
+    cursor: pointer;
+}
+.category:hover{
+    background-color: grey;
+}
+
+#CategoryHeading{
+    font-size: 50px;
+    padding-left: 2rem;
+}
+
