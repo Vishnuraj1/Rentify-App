@@ -35,7 +35,7 @@ const Signup = () => {
             onChange={(e) => setUsername(e.target.value)}
             id="fname"
             name="name"
-            defaultValue="John"
+            
           />
           <br />
           <label htmlFor="fname">Email</label>
@@ -47,7 +47,7 @@ const Signup = () => {
             onChange={(e) => setEmail(e.target.value)}
             id="fname"
             name="email"
-            defaultValue="John"
+            
           />
           <br />
             
@@ -60,7 +60,7 @@ const Signup = () => {
             onChange={(e) => setPhone(e.target.value)}
             id="lname"
             name="phone"
-            defaultValue="Doe"
+           
             />
           <br />
           <label htmlFor="lname">Password</label>
@@ -72,7 +72,7 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
             id="lname"
             name="password"
-            defaultValue="Doe"
+           
             />
           <br />
           <br />

@@ -13,7 +13,7 @@ function Login() {
     <div>
         <div>
       <div className="nav">
-        <h1>RENTIFY</h1>
+  <h1 className='BrandName'>RENTIFY</h1>
       </div>
       <div className="loginParentDiv">
         <img width="200px" height="200px" ></img>
@@ -27,7 +27,7 @@ function Login() {
             name="email"
             // value={Email}
             onChange={(e)=>setEmail(e.target.value)}
-            defaultValue="John"
+           
           />
           <br />
           <label htmlFor="lname">Password</label>
@@ -39,7 +39,7 @@ function Login() {
             name="password"
             // value={Password}
             onChange={(e)=>setPassword(e.target.value)}
-            defaultValue="Doe"
+           
           />
           <br />
           <br />

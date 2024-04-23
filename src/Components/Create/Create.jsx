@@ -13,13 +13,15 @@ const Create = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-     
-    
-      }
+
+
+    }
     return (
         <div>
             <div className="CreateContainer">
-           
+                <div className="nav">
+                    <h1>RENTIFY</h1>
+                </div>
                 <card>
                     <div className="centerDiv">
                         <form onSubmit={handleSubmit}>
@@ -35,7 +37,7 @@ const Create = () => {
                                 defaultValue="John"
                             />
                             <br />
-                            <label htmlFor="fname">Category</label>
+                            {/* <label htmlFor="fname">Category</label>
                             <br />
                             <input
                                 className="input"
@@ -45,7 +47,21 @@ const Create = () => {
                                 value={Category}
                                 onChange={((e) => { setCategory(e.target.value) })}
                                 defaultValue="John"
-                            />
+                            /> */}
+                            <br />
+                            <label for="cars">Category:</label>
+                            
+                            <select name="Category" id="Category">
+                                <option value="Car">Car</option>
+                                <option value="Home">Home</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Appliances">HomeAppliances</option>
+                                <option value="powerTools">powerTools</option>
+                                <option value="Computeprs">Computers</option>
+                                <option value="Mobile">Mobile Phones</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <br />
                             <br />
                             <label htmlFor="fname">Price</label>
                             <br />
@@ -68,8 +84,8 @@ const Create = () => {
                     </div>
                 </card>
 
-                </div>
-            
+            </div>
+
         </div>
     )
 }

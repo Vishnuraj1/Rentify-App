@@ -13,7 +13,7 @@ const Header = () => {
             <div className="navbar">
 
                 <div className="leftSection">
-                    <h1>RENTIFY</h1>
+                 <h1 >RENTIFY</h1>
                 </div>
                 <div className="middleSection">
                     <div className='textConatainer'>
