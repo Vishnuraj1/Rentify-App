@@ -1,8 +1,8 @@
 import React from 'react'
 import './Section1.css'
 
-import LocationDot from '../../../assets/LocationDot.png'
-import LocationArrow from '../../../assets/LocationArrow.png'
+import LocationDot from '../../../assets/Banner/Section/LocationDot.png'
+import LocationArrow from '../../../assets/Banner/Section/LocationArrow.png'
 
 const Section1 = () => {
   return (

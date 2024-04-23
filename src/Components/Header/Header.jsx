@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
-import Cart from '../../assets/Cart.svg'
-import Search from '../../assets/Search.svg'
+import Cart from '../../assets/Header/Cart.svg'
+import Search from '../../assets/Header/Search.svg'
 
 const Header = () => {
     return (
@@ -18,9 +18,8 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="rightSection">
-                    {/* <img src={cartImage} alt="" /> */}
-                    <span id='cart'><img src={Cart} alt="" /> Cart</span>
-                    <span id='login'>Login</span>
+                   <a href="" id='cart'><span > <img src={Cart} id='cartIcon' alt="" /> Cart</span></a> 
+                   <a href=""><span id='login'>Login</span></a> 
                     <button id='btn'>Sign Up</button>
                 </div>
             </div>

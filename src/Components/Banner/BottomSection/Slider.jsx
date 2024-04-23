@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import car from '../../../assets/Banner/CAR.png'
 import GAMING from '../../../assets/Banner/GAMING.png'
-import PowerTool from '../../../assets/Banner/powertools.jpg'
+import PowerTool from '../../../assets/Banner/powertools.png'
 import Furniture from '../../../assets/Banner/FURUNITURE.png'
 import ELECTRONIC from '../../../assets/Banner/ELECTRONIC.png'
 import HOUSE from '../../../assets/Banner/HOUSE.png'
