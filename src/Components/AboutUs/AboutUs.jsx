@@ -17,7 +17,7 @@ const AboutUs = () => {
                         <h1 className='cardText'>You Can Easily Find <br />Your Nearest Rental <br /> Shop</h1>
                     </div>
                 </div>
-                <div className="cardContainer blackContainer">
+                <div className="cardContainer">
                     <div className="left">
                         <h1 className='cardText'>You Can Save <br /> Your Time With <br />Rentify</h1>
                     </div>
@@ -35,7 +35,7 @@ const AboutUs = () => {
                     </div>
 
                 </div>
-                <div className="cardContainer blackContainer">
+                <div className="cardContainer ">
                     <div className="left">
                         <h1 className='cardText'>Our User Friendly <br />Platform Offer <br />Better Experience</h1>
                     </div>
