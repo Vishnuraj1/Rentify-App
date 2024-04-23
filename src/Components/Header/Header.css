@@ -53,18 +53,12 @@
     gap: 24px;
 }
 
-#cart {
+#plus {
     font-size: 18px;
     font-weight: bold;
    
 }
 
-/* #cartIcon{
- 
-} */
-.rightSection #cart{
-    padding-bottom: 8px;
-}
 .rightSection a{
     text-decoration: none;
 }

@@ -1,8 +1,11 @@
 import React from 'react'
 import './Header.css'
-import Cart from '../../assets/Header/Cart.svg'
+// import Cart from '../../assets/Header/Cart.svg'
 import Search from '../../assets/Header/Search.svg'
 import { Link } from 'react-router-dom'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus,faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     return (
@@ -19,9 +22,11 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="rightSection">
-                   <a href="" id='cart'><span > <img src={Cart} id='cartIcon' alt="" /> Create Rent</span></a> 
+                    <Link to="/create"> <span id='plus' >  <FontAwesomeIcon icon={faPlus} /> Rent</span></Link>
+                  
                    <Link to="/login"><span id='login'>Login</span></Link>
                    <Link to="/signup"> <button id='btn'>Sign Up</button></Link>
+                   <FontAwesomeIcon icon={faUser} />
                    
                 </div>
             </div>

@@ -7,6 +7,7 @@ import './App.css'
 import Home from './Pages/Home'
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
+import Create from './Components/Create/Create';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} /> {/* Default route (home) */}
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} /> 
+        <Route path="/create" element={<Create/>} /> 
       </Routes>
     </Router>
      
