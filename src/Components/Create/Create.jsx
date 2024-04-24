@@ -37,20 +37,9 @@ const Create = () => {
                                 defaultValue="John"
                             />
                             <br />
-                            {/* <label htmlFor="fname">Category</label>
-                            <br />
-                            <input
-                                className="input"
-                                type="text"
-                                id="fname"
-                                name="category"
-                                value={Category}
-                                onChange={((e) => { setCategory(e.target.value) })}
-                                defaultValue="John"
-                            /> */}
                             <br />
                             <label for="cars">Category:</label>
-                            
+
                             <select name="Category" id="Category">
                                 <option value="Car">Car</option>
                                 <option value="Home">Home</option>
@@ -71,7 +60,14 @@ const Create = () => {
                             />
 
                             <br />
-
+                            <br />
+                            <label htmlFor="fname">Location</label>
+                            <br />
+                            <input className="input" type="text" id="location" name="location"
+                                value={Price}
+                                onChange={(e) => { setPrice(e.target.value) }}
+                            />
+                            <br />
                             <br />
                             <img alt="Posts" width="200px" height="200px" src={Image ? URL.createObjectURL(Image) : ''} ></img>
 

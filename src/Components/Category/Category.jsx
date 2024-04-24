@@ -16,7 +16,7 @@ const Category = () => {
         </div>
 
         <div className="CategoryContainer">
-            <div className="category">
+            <div className="category" >
             <FontAwesomeIcon icon={faCar} size="2xl" style={{color: "#e3e7ee",}} />
             <p>Car</p>
             </div>
