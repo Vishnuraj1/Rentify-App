@@ -22,10 +22,10 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="rightSection">
-                    <Link to="/create"> <span id='plus' >  <FontAwesomeIcon icon={faPlus} /> Rent</span></Link>
+                    <Link to="/create"> <button id='plus' >  <FontAwesomeIcon icon={faPlus} /> Rent</button></Link>
                   
                    <Link to="/login"><span id='login'>Login</span></Link>
-                   <Link to="/signup"> <button id='btn'>Sign Up</button></Link>
+                  
                    <FontAwesomeIcon icon={faUser} />
                    
                 </div>

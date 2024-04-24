@@ -1,92 +1,98 @@
-import React, { useState } from 'react'
-import './Signup.css'
+import React, { useContext, useEffect, useState } from 'react';
+import './Signup.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import axios from 'axios'; // Assuming axios is imported
+import { UserContext } from '../../Store/UserContext';
 
-// import { createUserWithEmailAndPassword,getAuth} from 'firebase/auth';
 const Signup = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const {user,setUser}=useContext(UserContext)
 
-  const handlesubmit = async (e) => {
-    e.preventDefault()
-    //  const auth= getAuth()
-    //  createUserWithEmailAndPassword(auth,email,password
-    //   .then((userCredentioal)=>{
-    //     const user=userCredentioal.user
-    //    }))
+  useEffect(() => {
+    console.log(user);
+  },[user])
+ 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+try{
+
+  const res = await axios.post("http://localhost:3000/api/user", {
+    name: userName,
+    email: email,
+    password: password,
+  });
+  
+
+  if(res.data){
+    setUser(res.data)
     
+    navigate("/")
   }
+
+
+  
+}catch(err){
+  console.log(err.message);
+}
+};
 
 
   return (
     <>
-    <div class="nav">
+      <div className="nav">
         <h1>RENTIFY</h1>
-    </div>
-    <div className="signupParentDiv">
-        <img width="200px" height="200px" ></img>
-        <form onSubmit={handlesubmit}>
-          <label htmlFor="fname">Username</label>
+      </div>
+      <div className="signupParentDiv">
+        <img  alt="" width="200px" height="200px" />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="username">Username</label>
           <br />
           <input
             className="input"
             type="text"
-            // value={Username}
-            onChange={(e) => setUsername(e.target.value)}
-            id="fname"
-            name="name"
-            
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            id="username"
+            name="username"
           />
           <br />
-          <label htmlFor="fname">Email</label>
+          <label htmlFor="email">Email</label>
           <br />
           <input
             className="input"
             type="email"
-            // value={Email}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
-            id="fname"
+            id="email"
             name="email"
-            
           />
           <br />
-            
-          <label htmlFor="lname">Phone</label>
-          <br />
-          <input
-            className="input"
-            type="number"
-            // value={Phone}
-            onChange={(e) => setPhone(e.target.value)}
-            id="lname"
-            name="phone"
-           
-            />
-          <br />
-          <label htmlFor="lname">Password</label>
+          <label htmlFor="password">Password</label>
           <br />
           <input
             className="input"
             type="password"
-            // value={Password}
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
-            id="lname"
+            id="password"
             name="password"
-           
-            />
+          />
           <br />
           <br />
-            {/* {error && <span className="errMessage">{error}</span>} */}
-            <br />
-          <button >Signup</button>
+          <button type="submit">Signup</button>
         </form>
+        <br />
         <Link to="/login">
-          <a>Login</a>
+          Login
         </Link>
-
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Signup;

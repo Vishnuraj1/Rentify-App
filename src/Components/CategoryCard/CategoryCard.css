@@ -1,5 +1,5 @@
 
-.CategoryContainer {
+.CategoryCardContainer {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -18,7 +18,12 @@
      padding: 3rem 1rem; 
     border-radius: 10%;
     cursor: pointer;
+    transition: all 400ms ease-in;
 }
 .category:hover{
     background-color: grey;
+}
+
+#cText{
+    color: white;
 }

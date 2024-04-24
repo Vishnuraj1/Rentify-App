@@ -3,7 +3,8 @@ import './Post.css'
 
 import Photo from '../../assets/Banner/CAR.png'
 import Heart from '../../assets/Post/Heart';
-import Category from '../Category/Category';
+import { Link } from 'react-router-dom';
+// import Category from '../Category/Category';
 
 
 const Post = () => {
@@ -11,8 +12,8 @@ const Post = () => {
     <div>
       <div className="PostContainer">
 
-        <Category />
-
+        {/* <Category /> */}
+<Link to="/view">
         <div className="cards">
           <div className="card">
             <div className="favorite">
@@ -36,6 +37,8 @@ const Post = () => {
           } */}
 
         </div>
+
+        </Link>
       </div>
     </div>
   )

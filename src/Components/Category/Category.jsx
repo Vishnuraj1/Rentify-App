@@ -10,14 +10,16 @@ const Category = () => {
 
   return (
     <div>
-              
-              <div className="heading">
+      <div className="CategoryContainer">
+
+        <div className="heading">
           <span id='CategoryHeading'>Category</span>
           <span>View more</span>
         </div>
 
-       <CategoryCard/>
+        <CategoryCard />
 
+      </div>
     </div>
   )
 }

@@ -56,6 +56,12 @@
 #plus {
     font-size: 18px;
     font-weight: bold;
+    width: 84px;
+    height: 38px;
+    border-radius: 22.5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
    
 }
 

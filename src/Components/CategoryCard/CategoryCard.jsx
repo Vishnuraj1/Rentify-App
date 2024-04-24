@@ -1,48 +1,58 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react';
 
-import './CategoryCard.css'
-
+import './CategoryCard.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBlender,faMobileScreenButton,faBars,faScrewdriverWrench,faComputer, faCar, faCouch, faHouse } from '@fortawesome/free-solid-svg-icons';
-
-
+import {
+  faBlender,
+  faMobileScreenButton,
+  faBars,
+  faScrewdriverWrench,
+  faComputer,
+  faCar,
+  faCouch,
+  faHouse,
+} from '@fortawesome/free-solid-svg-icons';
+import Post from '../Post/Post';
 
 const CategoryCard = () => {
-    const [bgColor, setBgColor]=useState("black")
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-    const [icon,setIcon] = useState([])
+  const icons = [
+    { name: 'All Category', symbol: faBars },
+    { name: 'Car', symbol: faCar },
+    { name: 'House', symbol: faHouse },
+    { name: 'Furniture', symbol: faCouch },
+    { name: 'Appliances', symbol: faBlender },
+    { name: 'PowerTools', symbol: faScrewdriverWrench },
+    { name: 'Computers', symbol: faComputer },
+    { name: 'Mobile Phones', symbol: faMobileScreenButton },
+  ];
 
-    const icons =[ 
-        {   name:"Car", symbol:faCar},
-        {   name:"House", symbol:faHouse}, 
-        {   name:"Furniture", symbol:faCouch},
-        {   name:"Appliances", symbol:faBlender}, 
-        {   name:"PowerTools", symbol:faScrewdriverWrench}, 
-        {   name:"Computers", symbol:faComputer}, 
-        {   name:"Mobile Phones", symbol:faMobileScreenButton}, 
-        {   name:"All Category", symbol:faBars} 
-    ]
-const handleclick = (icons)=>{
-//   let newIcons = icons.map((icon)=>{
-//     icons == icon ? icon.backgroundColor="green" :icon.backgroundColor="black"
-//    })
-//    setIcon(newIcons)
-//    console.log(icon);
-}
+  const handleClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div>
-         <div className="CategoryContainer">
-        {icons.map((icons)=>(
-
-            <div key={icons} onClick={()=>{handleclick(icons)}} className="category"  style ={bgColor ==="red"?{backgroundColor:"red"}:{backgroundColor:"black"}} >
-            <FontAwesomeIcon icon={icons.symbol} size="2xl" style={{color: "#e3e7ee",}} />
-            <p>{icons.name}</p>
-            </div>
+      <div className="CategoryCardContainer">
+        {icons.map((icon) => (
+          <div
+            key={icon.name}
+            onClick={() => handleClick(icon.name)}
+            className="category"
+            style={{
+              backgroundColor: selectedCategory === icon.name ? 'red' : 'black',
+            }}
+          >
+            <FontAwesomeIcon icon={icon.symbol} size="2xl" style={{ color: '#e3e7ee' }} />
+            <p id='cText'>{icon.name}</p>
+          </div>
         ))}
-        </div>
+      </div>
+      <Post/>
     </div>
-  )
-}
+  );
+};
 
-export default CategoryCard
+export default CategoryCard;
